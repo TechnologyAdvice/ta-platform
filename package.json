@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "object-assign": "^4.1.1",
+    "promise": "^7.3.0",
     "whatwg-fetch": "^2.0.3"
   }
 }

@@ -23,5 +23,6 @@
     "ta-scripts": "^2.2.0"
   },
   "dependencies": {
+    "object-assign": "^4.1.1"
   }
 }

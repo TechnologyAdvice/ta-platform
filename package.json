@@ -23,6 +23,7 @@
     "ta-scripts": "^2.2.0"
   },
   "dependencies": {
-    "object-assign": "^4.1.1"
+    "object-assign": "^4.1.1",
+    "whatwg-fetch": "^2.0.3"
   }
 }

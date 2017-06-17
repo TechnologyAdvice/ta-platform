@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "description": "TA platform utilities",
   "main": "index.js",
+  "files": [
+    "polyfills"
+  ],
   "scripts": {
     "lint": "eslint .",
     "release:major": "ta-script npm/release major",

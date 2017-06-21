@@ -43,14 +43,14 @@ function validateS3Config (config) {
   if (!config.accessKeyId) {
     throw new Error(
       'An AWS_ACCESS_KEY_ID is required to deploy to S3. Either provide ' +
-      '`config.accessKeyId` to the depoy script, or set the AWS_ACCESS_KEY_ID ' +
+      '`config.accessKeyId` to the deploy script, or set the AWS_ACCESS_KEY_ID ' +
       'environment variable.'
     )
   }
   if (!config.secretAccessKey) {
     throw new Error(
       'An AWS_SECRET_ACCESS_KEY is required to deploy to S3. Either provide ' +
-      '`config.secretAccessKey` to the depoy script, or set the AWS_SECRET_ACCESS_KEY ' +
+      '`config.secretAccessKey` to the deploy script, or set the AWS_SECRET_ACCESS_KEY ' +
       'environment variable.'
     )
   }

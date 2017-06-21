@@ -4,7 +4,8 @@
   "description": "TA platform utilities",
   "main": "index.js",
   "files": [
-    "polyfills"
+    "polyfills",
+    "scripts"
   ],
   "scripts": {
     "lint": "eslint .",

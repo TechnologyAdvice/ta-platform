@@ -2,6 +2,12 @@ const AWS = require('aws-sdk')
 const path = require('path')
 const cp = require('child_process')
 
+const run = (cmd) => cp.execSync([
+  `AWS_ACCESS_KEY_ID=${config.accessKeyId}`,
+  `AWS_SECRET_ACCESS_KEY=${config.secretAccessKey}`,
+  cmd,
+].join(' '), { stdio: 'inherit' })
+
 function invalidateCloudfront (distributionId, config) {
   return new Promise((resolve, reject) => {
     const cloudfront = new AWS.CloudFront({
@@ -30,11 +36,11 @@ function invalidateCloudfront (distributionId, config) {
 
 function syncDirectory (dir, bucket, config) {
   return new Promise((resolve, reject) => {
-    cp.execSync([
-      `AWS_ACCESS_KEY_ID=${config.accessKeyId}`,
-      `AWS_SECRET_ACCESS_KEY=${config.secretAccessKey}`,
-      `aws s3 sync ${dir} s3://${bucket}/ --delete --acl public-read --cache-control "max-age=604800"`
-    ].join(' '), { stdio: 'inherit' })
+    run(`aws s3 sync ${dir} s3://${bucket}/ --delete --acl public-read --cache-control "max-age=604800"`)
+    run([
+      `aws s3 cp s3://${bucket} s3://${bucket} --exclude "*" --include "*.html"`,
+      `--recursive --metadata-directive REPLACE --acl public-read --cache-control "max-age=0"`,
+    ].join(' '))
     resolve()
   })
 }

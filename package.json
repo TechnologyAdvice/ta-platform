@@ -1,6 +1,6 @@
 {
   "name": "ta-platform",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "TA platform utilities",
   "main": "index.js",
   "files": [

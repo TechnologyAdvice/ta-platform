@@ -1,1 +1,1 @@
-global.Promise = require('promise/lib/es6-extensions')
+require('core-js/es6/promise')

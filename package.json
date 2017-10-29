@@ -27,6 +27,7 @@
     "ta-scripts": "^2.2.0"
   },
   "dependencies": {
+    "Base64": "^1.0.1",
     "aws-sdk": "^2.74.0",
     "core-js": "^2.5.1",
     "whatwg-fetch": "^2.0.3"

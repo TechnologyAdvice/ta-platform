@@ -1,3 +1,4 @@
+.yarn-cache
 .awcache
 *.log*
 .DS_Store

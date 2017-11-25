@@ -35,14 +35,7 @@
     "Base64": "^1.0.1",
     "aws-sdk": "^2.74.0",
     "core-js": "^2.5.1",
-    "eslint": "^4.10.0",
-    "eslint-config-ta": "^6.0.0",
-    "eslint-plugin-prettier": "^2.3.1",
-    "prettier": "^1.8.2",
     "ta-monitor": "^0.3.1",
-    "tslint": "^5.8.0",
-    "tslint-config-prettier": "^1.6.0",
-    "tslint-react": "^3.2.0",
     "whatwg-fetch": "^2.0.3"
   }
 }
